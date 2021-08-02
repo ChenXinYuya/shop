@@ -1,24 +1,13 @@
-# qf-shop
+## vue常见ui组件库
++ pc端  后台项目
+element-ui  
+iview
+antDesign-vue
 
-## Project setup
-```
-npm install
-```
++ 移动端
+mint-ui
+vant-ui
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 反向代理
+# 准备字体图标
