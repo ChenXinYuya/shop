@@ -41,9 +41,9 @@ export default {
             duration: 2000,
             onClose: () => {
               if (this.$route.query.from) {
-                this.$router.replace(this.$route.query.from)
+                this.$router.replace(this.$route.query.from).catch(() => {})
               } else {
-                this.$router.replace('/home')
+                this.$router.replace('/home').catch(() => {})
               }
             }
           })

@@ -61,10 +61,15 @@ export default {
         number: 1,
         token: getToken()
       }).then(res => {
-        this.$store.commit('cart/set_items', res.data.data.items)
         if (res.data.code === 0) {
+          this.$store.commit('cart/set_items', res.data.data.items)
           Toast.success({
             message: '加入购物车成功',
+            duration: 1000
+          })
+        } else {
+          Toast.fail({
+            message: res.data.msg,
             duration: 1000
           })
         }

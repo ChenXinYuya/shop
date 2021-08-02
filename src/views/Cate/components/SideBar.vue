@@ -5,7 +5,7 @@
       :key="cate.id"
       :title="cate.name"
       :class="[{'van-sidebar-item--select': categoryId===cate.id}]"
-      @click="clickCate(cate.id)"/>
+      @click="clickCate(cate.id)" />
     </van-sidebar>
   </div>
 </template>

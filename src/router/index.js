@@ -33,7 +33,7 @@ const routes = [
     name: 'cart',
     meta: {
       needLogin: true,
-      keepAlive: false
+      keepAlive: true
     },
     component: () => import('../views/Cart')
   },
@@ -82,6 +82,9 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  if (from.name === 'cart') {
+    from.meta.keepAlive = true
+  }
   if (!to.meta.needLogin) {
     next()
   } else if (isLogin()) {
