@@ -33,7 +33,7 @@ const routes = [
     name: 'cart',
     meta: {
       needLogin: true,
-      keepAlive: true
+      keepAlive: false
     },
     component: () => import('../views/Cart')
   },
@@ -72,6 +72,26 @@ const routes = [
       keepAlive: true
     },
     component: () => import('../views/Register')
+  },
+  {
+    path: '/order',
+    name: 'order',
+    component: () => import('../views/Order')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/ContactList')
+  },
+  {
+    path: '/addcontact',
+    name: 'addcontact',
+    component: () => import('../views/AddContact')
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: () => import('../views/Search')
   }
 ]
 
@@ -82,9 +102,6 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (from.name === 'cart') {
-    from.meta.keepAlive = true
-  }
   if (!to.meta.needLogin) {
     next()
   } else if (isLogin()) {

@@ -8,7 +8,7 @@
       <van-tabbar-item icon-prefix="icon"  icon="fenlei" to="/cate">分类</van-tabbar-item>
       <van-tabbar-item icon-prefix="icon"  icon="shopping-cart" to="/cart" :badge="$store.state.cart.items.length||''">购物车</van-tabbar-item>
       <van-tabbar-item icon-prefix="icon"  icon="tubiaolunkuo-" to="/user">我的</van-tabbar-item>
-  </van-tabbar>
+    </van-tabbar>
   </div>
 </template>
 

@@ -1,5 +1,3 @@
-import router from '../../router'
-
 export default {
   namespaced: true,
   state: {
@@ -8,7 +6,6 @@ export default {
   mutations: {
     set_items: function (state, items) {
       state.items = items
-      router.options.routes[3].meta.keepAlive = false
     }
   }
 }

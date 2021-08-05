@@ -22,6 +22,23 @@ const changeNum = (params = {}) => request.post('/shopping-cart/modifyNumber', p
 const changeSelect = (params = {}) => request.post('/shopping-cart/select', params)
 // 移除购物车中某个物品
 const removeItem = (params = {}) => request.post('/shopping-cart/remove', params)
+// 添加收获地址
+const addAddress = (params = {}) => request.post('/user/shipping-address/add', params)
+// 获取所有收获地址
+const getAllAddress = (params = {}) => request.get('/user/shipping-address/list', { params })
+// 编辑收获地址
+const editAddress = (params = {}) => request.post('/user/shipping-address/update', params)
+// 删除联系人
+const deleteAddress = (params = {}) => request.post('/user/shipping-address/delete', params)
+// 获取默认收获地址
+const getDefAddress = (params = {}) => request.get('/user/shipping-address/default/v2', { params })
+// 获取地址详情
+const getDetailAddress = (params = {}) => request.get('/user/shipping-address/detail/v2', { params })
+// 获取当前用户openid,unionid
+const getCurrentUser = (params = {}) => request.get('/user/detail', { params })
+// 退出出登录
+const exit = (params = {}) => request.get('/user/loginout', { params })
+
 export {
   fetchCates,
   fetchHomeBanner,
@@ -33,5 +50,13 @@ export {
   getCart,
   changeNum,
   changeSelect,
-  removeItem
+  removeItem,
+  addAddress,
+  getAllAddress,
+  editAddress,
+  deleteAddress,
+  getDefAddress,
+  getDetailAddress,
+  getCurrentUser,
+  exit
 }

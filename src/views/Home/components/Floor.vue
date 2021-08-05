@@ -6,7 +6,7 @@
       @click="clickItem(item.id,index)"
       >
         <div class="item-pic">
-          <img :src="item.pic" alt="">
+          <img v-lazy="item.pic" alt="">
         </div>
         <div class="item-info">
           <div class="item-name">

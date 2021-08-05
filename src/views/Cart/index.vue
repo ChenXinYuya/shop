@@ -23,7 +23,7 @@
           </template>
       </van-swipe-cell>
     </div>
-    <van-submit-bar :price="total*100" button-text="提交订单">
+    <van-submit-bar :price="total*100" button-text="提交订单" @submit="$router.push('/order')">
       <van-checkbox v-model="allChecked">全选</van-checkbox>
     </van-submit-bar>
     <common-tab/>

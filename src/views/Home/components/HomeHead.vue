@@ -1,7 +1,7 @@
 <template>
   <div id="home-head">
     <van-icon class-prefix="icon" name="fenlei" size="26" color="#8f8d8d" @click="$router.push('/cate')"/>
-    <div id="search">
+    <div id="search" @click="$router.push('/search')">
       <van-icon name="search" size="20" color="#8f8d8d"/>
       <span>请输入搜索内容</span>
     </div>
